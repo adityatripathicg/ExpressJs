@@ -21,16 +21,22 @@ app.listen(port,()=>{
 app.get("/",(req,res)=>{
     res.send("You Contacted ROOT Path");
 })
-app.get("/apple",(req,res)=>{
+app.get("/:apple/:id",(req,res)=>{
+    console.log(req.params);
     res.send("You Contacted APPLE Path");
 })
-app.get("/orange",(req,res)=>{
-    res.send("You Contacted orange Path");
-})
-app.get("*",(req,res)=>{
-    res.send("This path does not exist, please correct your path");
-});
 
-app.post("/",(req,res)=>{
-    res.send("You sent a post request to root path");
+app.get("/search",(req,res)=>{
+    console.log(req.query);
+    res.send("No Results");
 })
+// app.get("/orange",(req,res)=>{
+//     res.send("You Contacted orange Path");
+// })
+// app.get("*",(req,res)=>{
+//     res.send("This path does not exist, please correct your Route");
+// });
+
+// app.post("/",(req,res)=>{
+//     res.send("You sent a post request to root path");
+//})
