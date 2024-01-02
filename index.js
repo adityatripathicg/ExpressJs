@@ -30,13 +30,13 @@ app.get("/search",(req,res)=>{
     console.log(req.query);
     res.send("No Results");
 })
-// app.get("/orange",(req,res)=>{
-//     res.send("You Contacted orange Path");
-// })
-// app.get("*",(req,res)=>{
-//     res.send("This path does not exist, please correct your Route");
-// });
+app.get("/orange",(req,res)=>{
+    res.send("You Contacted orange Path");
+})
+app.get("*",(req,res)=>{
+    res.send("This path does not exist, please correct your Route");
+});
 
-// app.post("/",(req,res)=>{
-//     res.send("You sent a post request to root path");
-//})
+app.post("/",(req,res)=>{
+    res.send("You sent a post request to root path");
+})
