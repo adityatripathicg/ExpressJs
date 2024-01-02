@@ -7,17 +7,17 @@ let port = 8080;
 app.listen(port,()=>{
     console.log(`app listening on port ${port}\n server initiated!!!`);
 })
-// app.use((req,res)=>{
-//     //console.log(req);
+app.use((req,res)=>{
+    console.log(req);
     
-//     console.log("Request Received");
-//    // res.send("Response Received from Server!");
-//     // res.send({
-//     //     name: "CG",
-//     //     age: "20",
-//     // });
-//     res.send("<h1>Fruits</h1> <ul><li>Apple</li><li>Mango</li></ul>")
-// });
+    console.log("Request Received");
+    res.send("Response Received from Server!");
+    res.send({
+         name: "CG",
+         age: "20",
+     });
+    res.send("<h1>Fruits</h1> <ul><li>Apple</li><li>Mango</li></ul>")
+});
 app.get("/",(req,res)=>{
     res.send("You Contacted ROOT Path");
 })
