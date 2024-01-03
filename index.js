@@ -21,15 +21,15 @@
 // app.get("/",(req,res)=>{
 //     res.send("You Contacted ROOT Path");
 // })
-// app.get("/:apple/:id",(req,res)=>{
-//     console.log(req.params);
-//     res.send("You Contacted APPLE Path");
-// })
+app.get("/:apple/:id",(req,res)=>{
+    console.log(req.params);
+    res.send("You Contacted APPLE Path");
+})
 
-// app.get("/search",(req,res)=>{
-//     console.log(req.query);
-//     res.send("No Results");
-// })
+app.get("/search",(req,res)=>{
+    console.log(req.query);
+    res.send("No Results");
+})
 // app.get("/orange",(req,res)=>{
 //     res.send("You Contacted orange Path");
 // })
